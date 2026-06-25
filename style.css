@@ -1717,3 +1717,48 @@ body {
 .org-card-coordinator .org-card-info .org-role-badge {
   max-width: 160px;
 }
+
+/* Carta Organisasi Header Styles */
+.carta-controls-panel {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.carta-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.carta-header-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0;
+  color: var(--text-main);
+}
+
+.carta-search-wrapper {
+  max-width: 320px;
+  width: 100%;
+}
+
+/* On mobile, move search box above the title */
+@media (max-width: 640px) {
+  .carta-header-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .carta-search-wrapper {
+    order: -1; /* Move search box to the top */
+    max-width: 100%;
+  }
+  
+  .carta-header-title {
+    text-align: center;
+  }
+}
