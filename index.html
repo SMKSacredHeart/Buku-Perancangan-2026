@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ms" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Buku Perancangan & Pengurusan Sesi 2026/2027 | SMK Sacred Heart</title>
+  
+  <!-- Premium Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Lucide Icons Library via CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- App Wrapper -->
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="school-brand">
+        <div class="school-logo-mock">SH</div>
+        <div class="school-meta">
+          <h1 id="sidebar-school-name">SMK Sacred Heart</h1>
+          <span>Buku Perancangan 2026</span>
+        </div>
+      </div>
+      
+      <nav class="nav-menu">
+        <li class="nav-item">
+          <a class="nav-link active" data-tab="dashboard">
+            <i data-lucide="layout-dashboard"></i> Laman Utama
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-tab="profil">
+            <i data-lucide="school"></i> Profil & Takwim
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-tab="carta">
+            <i data-lucide="network"></i> Carta Organisasi
+          </a>
+        </li>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <button class="theme-toggle-btn" id="theme-toggle">
+          <i data-lucide="moon"></i> Mod Gelap
+        </button>
+      </div>
+    </aside>
+    
+    <!-- Floating Mobile Toggle Button -->
+    <button class="mobile-menu-btn" id="mobile-menu-toggle" style="position: fixed; top: 16px; left: 16px; z-index: 200; padding: 10px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: var(--shadow-md);">
+      <i data-lucide="menu"></i>
+    </button>
+    
+    <!-- Main Content Panel Area -->
+    <main class="main-content">
+      
+      <!-- Top Title and Time Header -->
+      <header class="top-header">
+        <div class="header-title">
+          <h2 id="dynamic-greeting">Selamat Sejahtera, Cikgu!</h2>
+          <p id="header-subtitle">Selamat datang ke gerbang pengurusan sekolah digital.</p>
+        </div>
+        <div class="header-actions">
+          <div class="time-badge" id="live-date">
+            <span>Memuatkan Tarikh & Masa...</span>
+          </div>
+        </div>
+      </header>
+      
+      <!-- TAB: DASHBOARD -->
+      <section class="tab-panel active" id="tab-dashboard">
+        
+        <!-- Welcome banner & stats -->
+        <div class="banner-card">
+          <div class="banner-pattern"></div>
+          <div class="banner-content">
+            <span class="banner-tag" id="dash-school-slogan">Slogan Sekolah</span>
+            <h3 id="dash-school-name">SMK Seri Bintang Utama</h3>
+            <p>Buku Panduan Pengurusan & Perancangan Sekolah Sesi Akademik 2026/2027.</p>
+          </div>
+        </div>
+        
+        <!-- Main Dashboard Split Grid -->
+        <div class="dashboard-grid">
+          
+          <!-- Left Column: Announcements -->
+          <div class="dashboard-left">
+            <div class="glass-panel announcements-card">
+              <h3 class="card-title">
+                <span>Pengumuman Terkini</span>
+                <i data-lucide="bell" style="width: 20px; height: 20px; color: var(--color-hem);"></i>
+              </h3>
+              <div class="announcements-list" id="dash-announcements">
+                <!-- Dynamically loaded from app.js -->
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Column: Quick Links -->
+          <div class="dashboard-right">
+            <div class="glass-panel quick-links-card">
+              <h3 class="card-title">Pautan Pantas</h3>
+              <div class="links-grid" style="grid-template-columns: 1fr;">
+                <a class="link-btn" onclick="document.querySelector('[data-tab=profil]').click(); document.getElementById('search-tab-nav-cal').scrollIntoView({behavior: 'smooth'})" style="justify-content: center;">
+                  <i data-lucide="calendar" style="stroke: var(--color-pentadbiran);"></i> Takwim Persekolahan
+                </a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+      
+      <!-- TAB: PROFIL & TAKWIM -->
+      <section class="tab-panel" id="tab-profil">
+        
+        <!-- Profile Banner -->
+        <div class="glass-panel profile-card" style="display: flex; flex-direction: row; align-items: center; justify-content: flex-start; gap: 24px; text-align: left; padding: 24px;">
+          <div class="profile-logo" style="margin-bottom: 0; width: 80px; height: 80px; font-size: 2rem; border-radius: 16px;">SH</div>
+          <div>
+            <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 4px;">SMK Sacred Heart</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Buku Perancangan & Pengurusan Sekolah Sesi Akademik 2026/2027</p>
+          </div>
+        </div>
+
+
+        
+        <!-- School Calendar (Takwim) Section -->
+        <div class="glass-panel" style="padding: 32px; display: flex; flex-direction: column; gap: 20px;" id="search-tab-nav-cal">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid var(--border-color); padding-bottom: 16px;">
+            <h3 style="font-size: 1.35rem; font-weight: 800; margin: 0; color: var(--text-main);" id="calendar-title">Takwim Persekolahan & Peristiwa 2026</h3>
+            <div style="display: flex; align-items: center; gap: 10px; background-color: var(--primary-light); padding: 8px 16px; border-radius: 12px; border: 2px solid var(--primary); box-shadow: var(--shadow-sm);">
+              <i data-lucide="calendar" style="color: var(--primary); width: 18px; height: 18px; stroke-width: 2.5px;"></i>
+              <label for="calendar-year-filter" style="font-size: 0.9rem; font-weight: 700; color: var(--primary); margin: 0;">Tahun Takwim:</label>
+              <select id="calendar-year-filter" class="filter-select" style="border: none; background: transparent; color: var(--primary); font-weight: 800; font-size: 0.95rem; outline: none; cursor: pointer; padding-right: 4px;">
+                <option value="2026" selected style="background-color: var(--bg-sidebar); color: var(--text-main);">2026</option>
+                <option value="2027" style="background-color: var(--bg-sidebar); color: var(--text-main);">2027</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="calendar-layout">
+            
+            <!-- Calendar List Panel (Left) -->
+            <div class="calendar-main">
+              <!-- Controls and Filters -->
+              <div class="calendar-filters">
+                <button class="cal-filter-btn active" data-category="all">Semua Peristiwa</button>
+                <button class="cal-filter-btn" data-category="Pentadbiran">Pentadbiran</button>
+                <button class="cal-filter-btn" data-category="Kurikulum">Kurikulum</button>
+                <button class="cal-filter-btn" data-category="HEM">HEM</button>
+                <button class="cal-filter-btn" data-category="Kokurikulum">Kokurikulum</button>
+              </div>
+              
+              <!-- Event Row Listing -->
+              <div class="calendar-events-list" id="calendar-events-container">
+                <!-- Loaded from app.js -->
+              </div>
+            </div>
+            
+            <!-- Calendar Search & Guidelines (Right) -->
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+              <div class="glass-panel" style="padding: 16px; border-color: var(--border-color); background-color: var(--bg-app); display: flex; flex-direction: column; gap: 12px;">
+                <h4 style="font-size: 0.9rem; font-weight: 700; display: flex; align-items: center; gap: 6px;">
+                  <i data-lucide="search" style="width: 16px; height: 16px;"></i> Carian Peristiwa
+                </h4>
+                <div class="search-input-wrapper" style="width: 100%;">
+                  <i data-lucide="search" style="width: 14px; height: 14px; left: 10px;"></i>
+                  <input type="text" id="calendar-search" placeholder="Cari nama aktiviti/lokasi..." class="search-input" style="padding: 8px 10px 8px 30px; font-size: 0.8rem; border-radius: 8px;">
+                </div>
+              </div>
+              
+              <div class="glass-panel" style="padding: 16px; border-color: var(--border-color); background-color: var(--bg-app);">
+                <h4 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+                  <i data-lucide="info" style="width: 16px; height: 16px;"></i> Petunjuk Warna
+                </h4>
+                <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.8rem; font-weight: 600;">
+                  <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="width: 14px; height: 14px; border-radius: 4px; background-color: var(--color-pentadbiran); display: block;"></span> Pentadbiran
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="width: 14px; height: 14px; border-radius: 4px; background-color: var(--color-kurikulum); display: block;"></span> Kurikulum
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="width: 14px; height: 14px; border-radius: 4px; background-color: var(--color-hem); display: block;"></span> Hal Ehwal Murid
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="width: 14px; height: 14px; border-radius: 4px; background-color: var(--color-kokurikulum); display: block;"></span> Kokurikulum
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+      </section>
+
+      <!-- TAB: CARTA ORGANISASI -->
+      <section class="tab-panel" id="tab-carta">
+        
+        <!-- Controls & Filters -->
+        <div class="glass-panel" style="padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+            <h3 style="font-size: 1.35rem; font-weight: 800; margin: 0; color: var(--text-main);">Carta Organisasi Sekolah 2026</h3>
+            <div class="search-input-wrapper" style="max-width: 320px; width: 100%;">
+              <i data-lucide="search" style="width: 16px; height: 16px; left: 14px;"></i>
+              <input type="text" id="carta-search" placeholder="Cari nama atau jawatan..." class="search-input">
+            </div>
+          </div>
+          
+          <div class="calendar-filters" style="margin: 0;">
+            <button class="carta-filter-btn active" data-category="all">Semua Bidang</button>
+            <button class="carta-filter-btn" data-category="Pentadbiran">Pentadbiran</button>
+            <button class="carta-filter-btn" data-category="Kurikulum">Kurikulum</button>
+            <button class="carta-filter-btn" data-category="HEM">Hal Ehwal Murid (HEM)</button>
+            <button class="carta-filter-btn" data-category="Kokurikulum">Kokurikulum</button>
+          </div>
+        </div>
+
+        <!-- Org Chart Visual Tree Container -->
+        <div class="org-chart-viewport glass-panel" style="padding: 40px; overflow-x: auto;">
+          <div class="org-chart-wrapper" id="org-chart-container">
+            <!-- Rendered dynamically by app.js -->
+          </div>
+        </div>
+
+      </section>
+
+      
+
+      
+    </main>
+  </div>
+
+  <!-- Include School Data and JavaScript Logic -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  
+</body>
+</html>
